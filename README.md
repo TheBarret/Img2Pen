@@ -30,12 +30,12 @@ python draw.py * 70 70
 
 CONFIG:
 
-* GRID_WIDTH and GRID_HEIGHT determine the size in-game where the image will be plotted.
-* STEP_SIZE and SCALE_FACTOR are the ones that can give more or less detail by adding padding and enlargement.
-* METHODS, 0 and 1 are simple vert/horz plotters and 2 is a continuous plotter from left to right and back.
-* THRESHOLD holds the minimal value that would indicate if there should be a pixel plotted.
-* SX and SY are starting points, these are for internal reference where the plotter initiate its begin.
-* DELAY is set to 0.02 , but sometimes the pen stops working, turning this value higher to 0.04+ would fix that.
+* GRID_WIDTH and GRID_HEIGHT determine the size in-game where the image will be plotted. (no need to edit this for it uses X and Y)
+* STEP_SIZE and SCALE_FACTOR are the ones that can give more or less detail by adding padding and enlargement. (tinker away...)
+* METHODS, 0 and 1 are simple vert/horz plotters and 2 is a continuous plotter from left to right and back. (tinker away...)
+* THRESHOLD holds the minimal value that would indicate if there should be a pixel plotted. (if you feel like tinkering)
+* SX and SY are starting points, these are for internal reference where the plotter initiate its begin. (no need to edit)
+* DELAY is set to 0.02 , but sometimes the pen stops working, turning this value higher to 0.04+ would fix that. (trial and error seems to work)
 
 CONTROLS:
 Q for stopping
