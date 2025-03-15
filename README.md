@@ -16,6 +16,8 @@ the user only has to run the script along side the VRchat window (windowed).
 The script will try to lovate the window from VRChat automatically, and starts right away when found.
 If you need to stop quickly, press Q or P, also moving the mouse whilst processing would disturb the result.
 
+Input image requirements, supported PNG and JPG of 512x512 and best and ideally GRAYSCALE or Black & White images,
+drop them in the root folder, and thats all.
 
 COMMAND LINE:
 ```
