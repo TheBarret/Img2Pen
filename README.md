@@ -3,6 +3,13 @@ Little script that can interpolate images to VRChat's using a Pencil
 
 Status: Very alpha stage, on going project
 
+![image](https://github.com/user-attachments/assets/9c81911f-033a-4650-97eb-8bd09d3beae7)
+
+![image](https://github.com/user-attachments/assets/2b1f0094-cf4e-4f76-b7b0-f7c8b2a597d2)
+
+![image](https://github.com/user-attachments/assets/37dc3149-b542-4f2a-9bc2-f1dd118b3f27)
+
+
 It's a very basic script, nothing complex.
 It will try to map out an image in grayscale with a threshold and use it for the pen in VRChat,
 the user only has to run the script along side the VRchat window (windowed).
