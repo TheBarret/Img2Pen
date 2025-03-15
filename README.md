@@ -14,6 +14,17 @@ It's a very basic script, nothing complex.
 It will try to map out an image in grayscale with a threshold and use it for the pen in VRChat,
 the user only has to run the script along side the VRchat window (windowed).
 
+
+COMMAND LINE:
+```
+python draw.py <filename> 50 50
+python draw.py 5.jpg 70 70
+python draw.py * 70 70
+```
+
+* Using a * will let the script pick a random image in the root folder.
+
+
 * GRID_WIDTH and GRID_HEIGHT determine the size in-game where the image will be plotted.
 * STEP_SIZE and SCALE_FACTOR are the ones that can give more or less detail by adding padding and enlargement.
 * METHODS, 0 and 1 are simple vert/horz plotters and 2 is a continuous plotter from left to right and back.
