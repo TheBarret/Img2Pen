@@ -19,13 +19,16 @@ If you need to stop quickly, press Q or P, also moving the mouse whilst processi
 
 COMMAND LINE:
 ```
-python draw.py <filename> 50 50
+python draw.py <filename> X Y
 python draw.py 5.jpg 70 70
 python draw.py * 70 70
 ```
 
 * Using a * will let the script pick a random image in the root folder.
+* the X and Y are the dimensions in-game, so 70x70 (very large) or 50x50 (small but decent)
 
+
+CONFIG:
 
 * GRID_WIDTH and GRID_HEIGHT determine the size in-game where the image will be plotted.
 * STEP_SIZE and SCALE_FACTOR are the ones that can give more or less detail by adding padding and enlargement.
