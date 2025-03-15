@@ -11,14 +11,14 @@ from PIL import Image
 
 # Configuration
 METHOD          = 2     # 0 = horizontal, 1 = vertical, 2 = continuous lines
-THRESHOLD       = 128   # color threshold trigger (mid)
+THRESHOLD       = 127   # color threshold trigger (mid)
 GRID_WIDTH      = 50  # columns
 GRID_HEIGHT     = 50  # rows
-STEP_SIZE       = 5   # step
+STEP_SIZE       = 4   # step
 SCALE_FACTOR    = 2   # scaler
 SX              = 512  # Starting X position
 SY              = 512  # Starting Y position
-DELAY           = 0.2  # Delay between movements
+DELAY           = 0.02  # Delay between movements
 PAUSE_KEY       = "p"  # Key to pause/resume
 QUIT_KEY        = "q"  # Key to quit
 SPEED_UP        = "="  # Key to increase speed
@@ -141,10 +141,10 @@ def draw_vertical_lines(hwnd, image_path, start_x, start_y):
                 time.sleep(DELAY)
             else:
                 move_mouse_relative(0, STEP_SIZE * SCALE_FACTOR)
-                time.sleep(DELAY)
                 row += 1
+                time.sleep(DELAY)
         move_mouse_relative(STEP_SIZE * SCALE_FACTOR, -GRID_HEIGHT * STEP_SIZE * SCALE_FACTOR)
-        time.sleep(0.3)
+        time.sleep(DELAY)
         
     return True
     
@@ -177,24 +177,24 @@ def draw_continuous_lines(hwnd, image_path, start_x, start_y):
                 handle_hotkeys()
                 if pixels[col, row] < THRESHOLD:
                     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
-                    time.sleep(DELAY)
+                    #time.sleep(DELAY)
                 move_mouse_relative(STEP_SIZE * SCALE_FACTOR, 0)
                 time.sleep(DELAY)
                 if pixels[col, row] >= THRESHOLD:
                     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
-                    time.sleep(DELAY)
+            time.sleep(DELAY)
         else:
             # Right to left
             for col in range(GRID_WIDTH - 1, -1, -1):
                 handle_hotkeys()
                 if pixels[col, row] < THRESHOLD:
                     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
-                    time.sleep(DELAY)
+                    #time.sleep(DELAY)
                 move_mouse_relative(-STEP_SIZE * SCALE_FACTOR, 0)
                 time.sleep(DELAY)
                 if pixels[col, row] >= THRESHOLD:
                     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
-                    time.sleep(DELAY)
+            time.sleep(DELAY)
         
         # Move down to the next row
         move_mouse_relative(0, STEP_SIZE * SCALE_FACTOR)
