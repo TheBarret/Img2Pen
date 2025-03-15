@@ -13,6 +13,8 @@ Status: Very alpha stage, on going project
 It's a very basic script, nothing complex.
 It will try to map out an image in grayscale with a threshold and use it for the pen in VRChat,
 the user only has to run the script along side the VRchat window (windowed).
+The script will try to lovate the window from VRChat automatically, and starts right away when found.
+If you need to stop quickly, press Q or P, also moving the mouse whilst processing would disturb the result.
 
 
 COMMAND LINE:
